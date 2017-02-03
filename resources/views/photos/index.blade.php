@@ -34,7 +34,7 @@
           <td>
             @if (!is_null($photo->video))
               <p class="hidden">1</p><!-- pour trier les photos -->
-              <a href="{{ $photo->video }}"><i class="fa fa-film text-primary"></i></a>
+              <a href="{{ $photo->video }}" target="_blank"><i class="fa fa-film text-primary"></i></a>
             @else
               <p class="hidden">0</p><!-- pour trier les photos -->
               <i class="fa fa-times text-danger"></i>
