@@ -27,8 +27,8 @@
         <tr>
           <td>
             <p class="hidden">{{ $image->id }}</p><!-- pour trier les images -->
-            <img src="{{ $image->url }}" alt="{{ $image->name }}" width="50px"></td>
-          <td>{{ $image->name }}</td>
+            <img src="{{ $image->url }}" alt="{{ $image->name }}" width="120px"></td>
+          <td><h3>{{ $image->name }}</h3></td>
           <td>
             @if(count($image->projets) > 0)
               <p class="hidden">1</p><!-- pour trier les images -->
@@ -56,6 +56,27 @@
   <script type="text/javascript">
 
     $(document).ready(function(){
+      $('.table').dataTable({
+          "aoColumnDefs": [{
+            'bSortable': false,
+            'aTargets': [-1]
+          }],
+          "oLanguage": {
+            "oPaginate": {
+              "sPrevious": "",
+              "sNext": ""
+            }
+          },
+          "iDisplayLength": 10,
+          "aLengthMenu": [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+          ],
+          "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+          "oTableTools": {
+            "sSwfPath": "localhost:8000/swf/copy_csv_xls_pdf.swf"
+          }
+        });
       $('.delete').on("click", function(){
         return confirm("Attention, supprimer une image est irréversible. Veux-tu réellement supprimer cette image ?");
       })

@@ -28,7 +28,7 @@
     <tbody>
       @foreach ($photos as $key => $photo)
         <tr>
-          <td><img src="{{ $photo->image }}" alt="{{ $photo->titre }}" width="50px"></td>
+          <td><img src="{{ $photo->image }}" alt="{{ $photo->titre }}" width="100px"></td>
           <td>{{ $photo->titre }}</td>
           <td class="text-left">{!! $photo->description !!}</td>
           <td>
@@ -70,6 +70,27 @@
   <script src="{{ asset('dist/index.min.js') }}"></script>
   <script type="text/javascript">
     $(document).ready(function(){
+      $('.table').dataTable({
+          "aoColumnDefs": [{
+            'bSortable': false,
+            'aTargets': [-1]
+          }],
+          "oLanguage": {
+            "oPaginate": {
+              "sPrevious": "",
+              "sNext": ""
+            }
+          },
+          "iDisplayLength": 10,
+          "aLengthMenu": [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+          ],
+          "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+          "oTableTools": {
+            "sSwfPath": "localhost:8000/swf/copy_csv_xls_pdf.swf"
+          }
+        });
       $('.delete').on("click", function(){
         return confirm("Attention, supprimer une photo est irréversible. Veux-tu réellement supprimer cette photo ?");
       });

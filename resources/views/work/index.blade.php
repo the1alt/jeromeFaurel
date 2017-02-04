@@ -2,7 +2,12 @@
 
 @section('css')
   <!-- Datatables CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('dist/index.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/media/css/dataTables.bootstrap.css')}}">
+
+  <!-- Datatables Editor Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css')}}">
+  <!-- Datatables ColReorder Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css')}}">
 @endsection
 
 @section('content')
@@ -29,7 +34,7 @@
     <tbody>
       @foreach ($projets as $key => $projet)
         <tr>
-          <td><img src="{{ $projet->images['url'] }}" alt="{{ $projet->titre }}" width="50px"></td>
+          <td><img src="{{ $projet->images['url'] }}" alt="{{ $projet->titre }}" width="100px"></td>
           <td>{{ $projet->titre }}</td>
           <td class="text-left">{!! $projet->description !!}</td>
           <td>{{ $projet->categories->name }}</td>
@@ -72,6 +77,27 @@
   <script src="{{ asset('dist/index.min.js') }}"></script>
   <script type="text/javascript">
     $(document).ready(function(){
+      $('.table').dataTable({
+          "aoColumnDefs": [{
+            'bSortable': false,
+            'aTargets': [-1]
+          }],
+          "oLanguage": {
+            "oPaginate": {
+              "sPrevious": "",
+              "sNext": ""
+            }
+          },
+          "iDisplayLength": 10,
+          "aLengthMenu": [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"]
+          ],
+          "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
+          "oTableTools": {
+            "sSwfPath": "localhost:8000/swf/copy_csv_xls_pdf.swf"
+          }
+        });
       $('.delete').on("click", function(){
         return confirm("Attention, supprimer un projet est irréversible. Veux-tu réellement supprimer ce projet ?");
       });

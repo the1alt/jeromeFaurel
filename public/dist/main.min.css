@@ -547,6 +547,14 @@ margin-right : 0px;
 .panel-heading.note-toolbar{
   overflow: visible;
 }
+/*********** Index   ***************/
+.table .btn{
+  margin: 5px auto;
+  padding: 7px 8px;
+}
+.table .fa{
+  font-size: 1.7em;
+}
 /**********  Create  ***************/
 
 .submit{
