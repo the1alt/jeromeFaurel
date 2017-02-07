@@ -14,6 +14,9 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(function(mix){
+   mix.browserSync({
+        proxy: 'localhost:8000'
+   });
     // Mixing CSS Files
     mix.styles('./public/skin/default_skin/css/theme.css', 'public/dist/theme.min.css');
 
@@ -38,13 +41,13 @@ elixir(function(mix){
     mix.scripts([
         './public/vendor/jquery/jquery-1.11.1.min.js',
         './public/vendor/jquery/jquery_ui/jquery-ui.min.js',
-        './public/js/utility/utility.js', './public//demo/demo.js',
+        './public/js/utility/utility.js', './public/js/demo/demo.js',
         './public/js/main.js'
       ], 'public/dist/main.min.js');
 
     mix.scripts('./public/js/custom/custom.js', 'public/dist/custom.min.js' );
 
-    mix.scripts('./public/vendor/plugins/summernote/summernote.min.js', 'public/dist/summernotes.min.js' );
+    mix.scripts('./public/vendor/plugins/summernote/summernote.min.js', 'public/dist/summernote.min.js' );
 
     mix.scripts([
         './public/vendor/plugins/datatables/media/js/jquery.dataTables.js',
@@ -55,7 +58,7 @@ elixir(function(mix){
 
     mix.scripts([
         './public/vendor/plugins/magnific/jquery.magnific-popup.js',
-        './vendor/bower/masonry.pkgd.min.js'
+        './vendor/bower/masonry/dist/masonry.pkgd.min.js'
       ], 'public/dist/detail.min.js');
 
 

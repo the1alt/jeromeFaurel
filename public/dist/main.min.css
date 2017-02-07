@@ -1,20 +1,10 @@
 
+/*******************************************************
+                          COMMON
+*******************************************************/
 body{
   font-family: 'Spinnaker', sans-serif;
   min-height: auto;
-}
-footer{
-  background-color: #EEE;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-}
-footer p{
-  width: 100%;
-  text-align: center;
-  margin-top: 9.5px;
 }
 #content_wrapper{
   margin-top: 61px;
@@ -32,13 +22,6 @@ h1{
   text-align : center;
   margin-top:2em;
   margin-bottom: 2em;
-}
-.table > thead > tr > th{
-  text-align: center;
-  vertical-align: middle;
-}
-table.dataTable thead th.sorting_disabled{
-  background-color: #EEE;
 }
 
 /*******************************************************
@@ -355,7 +338,7 @@ margin-right : 0px;
 
 
 /*******************************************************
-                      IMAGE ANIMATION
+                      WORK DETAIL
 *******************************************************/
 .grid {
 	max-width: 69em;
@@ -417,7 +400,7 @@ margin-right : 0px;
 
 
 
-/*************  CAPTION **************************/
+/*********************  CAPTION **********************/
 .captionBox{
   overflow: hidden;
   position: relative;
@@ -467,9 +450,7 @@ margin-right : 0px;
   color: #FF8819;
 }
 
-/*******************************************************
-                      Magnific Popup
-*******************************************************/
+/******************   Magnific Popup   ******************/
 .mfp-title{
   text-align : center;
   padding-right: 0;
@@ -539,6 +520,7 @@ margin-right : 0px;
 .table-bordered, .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
   border: 1px solid #ddd;
 }
+
 /*******************************************************
                       ADMIN Pages
 *******************************************************/
@@ -547,6 +529,7 @@ margin-right : 0px;
 .panel-heading.note-toolbar{
   overflow: visible;
 }
+
 /*********** Index   ***************/
 .table .btn{
   margin: 5px auto;
@@ -555,8 +538,15 @@ margin-right : 0px;
 .table .fa{
   font-size: 1.7em;
 }
-/**********  Create  ***************/
+.table > thead > tr > th{
+  text-align: center;
+  vertical-align: middle;
+}
+table.dataTable thead th.sorting_disabled{
+  background-color: #EEE;
+}
 
+/**********  Create  ***************/
 .submit{
   text-align: center;
 }
@@ -573,9 +563,7 @@ margin-right : 0px;
   padding: 20px;
 }
 
-
 /********** SelectPicker **************/
-
 .open > .dropdown-menu{
   display: flex;
   -webkit-flex-flow: row wrap;
@@ -583,12 +571,28 @@ margin-right : 0px;
   flex-flow: row wrap;
   z-index: 9999;
 }
-
 .bootstrap-select.btn-group .dropdown-menu li:first-child{
   width: 100%;
 }
 .bootstrap-select.btn-group .dropdown-menu li{
   width: 33%;
+}
+
+/*******************************************************
+                      FOOTER
+*******************************************************/
+footer{
+  background-color: #EEE;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+footer p{
+  width: 100%;
+  text-align: center;
+  margin-top: 9.5px;
 }
 
 /*# sourceMappingURL=main.min.css.map */

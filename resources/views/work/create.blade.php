@@ -142,7 +142,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="section">
-                        <textarea type="text" name="description" id="summernote"></textarea>
+                        <textarea type="text" name="description" class="summernote"></textarea>
                       </div>
                       @if ($errors->has('description'))
                         <p class="help-block text-danger text-center">
