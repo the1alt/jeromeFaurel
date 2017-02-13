@@ -6,7 +6,7 @@
       <div class="container welcome">
         <div class="row">
           <div class="col-md-4 logo-block">
-            <img src="http://localhost:8000/assets/img/logos/logo.png" alt="Jérôme FAUREL logo" id="welcome-logo">
+            <img src="assets/img/logos/logo.png" alt="Jérôme FAUREL logo" id="welcome-logo">
 
           </div>
           <div class="col-md-8 titre-block">

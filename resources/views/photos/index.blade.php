@@ -41,7 +41,7 @@
             @endif
           </td>
           <td>
-            @if($photo->active === 1)
+            @if($photo->active == 1)
               <p class="hidden">1</p><!-- pour trier les photos -->
               <i class="fa fa-check text-success"></i>
             @else

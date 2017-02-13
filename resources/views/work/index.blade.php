@@ -48,7 +48,7 @@
             @endif
           </td>
           <td>
-            @if($projet->active === 1)
+            @if($projet->active == 1)
               <p class="hidden">1</p><!-- pour trier les photos -->
               <i class="fa fa-check text-success"></i>
             @else
@@ -95,7 +95,7 @@
           ],
           "sDom": '<"dt-panelmenu clearfix"lfr>t<"dt-panelfooter clearfix"ip>',
           "oTableTools": {
-            "sSwfPath": "localhost:8000/swf/copy_csv_xls_pdf.swf"
+            "sSwfPath": "dist/swf/copy_csv_xls_pdf.swf"
           }
         });
       $('.delete').on("click", function(){

@@ -8,7 +8,7 @@
       <span>+33 6 19 68 43 97</span></br>
       <a href="mailto:j2record@gmail.com">j2record@gmail.com</a>
     </p>
-    <img src="http://localhost:8000/assets/img/logos/MIX-moustache.jpg" alt="MIX-Moustache">
+    <img src="assets/img/logos/MIX-moustache.jpg" alt="MIX-Moustache">
   </div>
 
 

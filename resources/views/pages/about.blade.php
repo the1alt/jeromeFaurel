@@ -4,7 +4,7 @@
 @section('content')
   <div class="presentation">
 
-    <img id="photo-id" src="http://localhost:8000/uploads/photos/jerome-faurel.jpg" alt="Jérôme FAUREL">
+    <img id="photo-id" src="uploads/photos/jerome-faurel.jpg" alt="Jérôme FAUREL">
 
     <p>
       Batteur de formation, ma passion pour le son est venue de la musique. C'est en BTS audiosuel option son que j'ai découvert le travail du son à l'image qui m'a tout de suite séduit.
