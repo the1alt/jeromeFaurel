@@ -10,19 +10,20 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="/"><i class="fa fa-home"></i> HOME</a>
+
+          <a href="/" class="{{ Route::currentRouteName() === 'welcome' ? 'active' : '' }}" ><i class="fa fa-home"></i> HOME</a>
         </li>
         <li>
-          <a href="/work"><i class="fa fa-film"></i> WORK</a>
+          <a href="/work"  class="{{ strpos(Route::currentRouteName(), 'work') === 0 ? 'active' : '' }}" ><i class="fa fa-film"></i> WORK</a>
         </li>
         <li>
-          <a href="/photos"><i class="fa fa-camera"></i> PHOTOS</a>
+          <a href="/photos"  class="{{ strpos(Route::currentRouteName(), 'photos') === 0 ? 'active' : '' }}" ><i class="fa fa-camera"></i> PHOTOS</a>
         </li>
         <li>
-          <a href="/about"><i class="fa fa-info"></i> ABOUT</a>
+          <a href="/about"  class="{{ Route::currentRouteName() === 'about' ? 'active' : '' }}" ><i class="fa fa-info"></i> ABOUT</a>
         </li>
         <li>
-          <a href="/contact"><i class="fa fa-envelope"></i> CONTACT</a>
+          <a href="/contact"  class="{{ Route::currentRouteName() === 'contact' ? 'active' : '' }}" ><i class="fa fa-envelope"></i> CONTACT</a>
         </li>
       </ul>
     </div>

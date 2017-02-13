@@ -4,7 +4,6 @@
 @section('content')
 
   <div class="tray tray-center">
-    <h1 id="pageTitle">WORK</h1>
     <div class="container-fluid">
       <div class="row">
           @foreach ($categories as $key => $categorie)
