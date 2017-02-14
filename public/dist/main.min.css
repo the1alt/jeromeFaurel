@@ -1,8 +1,9 @@
 /*******************************************************
                           COMMON
 *******************************************************/
-body{
+body, html{
   font-family: 'Spinnaker', sans-serif;
+  font-size: 14px;
   min-height: auto;
 }
 #main::before{
@@ -32,6 +33,15 @@ h1{
 /*******************************************************
                           Nav
 *******************************************************/
+.nav-logo{
+  float: left;
+  padding-left: 10px;
+}
+.nav-brand{
+  float: left;
+  padding: 15px 0;
+  font-size: 1.4em;
+}
 .navbar-nav i{
   width: 38px;
   font-size: 17;
@@ -41,9 +51,33 @@ h1{
 .navbar-nav a.active i{
   color: #FF8819;
 }
-.navbar .nav > li > a.active{
+.navbar .nav > .flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.nav > .flex > li{
+  position: relative;
+  display: block;
+}
+.navbar .nav > .flex > li > a{
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  display: block;
+  padding: 20px 15px;
+  height: 59px;
+  max-height: 59px;
+  line-height: 19px;
+}
+.navbar .nav > .flex > li > a.active{
   color: #222;
 }
+#btn-menu{
+  display: none;
+}
+
 /*******************************************************
                           SideNav
 *******************************************************/
@@ -59,6 +93,10 @@ h1{
   .sidebar-menu > li > ul > li.active > a > span:nth-child(1), .sidebar-menu > li > ul > li > a.menu-open > span:nth-child(1){
     color: #FF8819;
   }
+  .sidebar-menu > li > ul > li.active > a:after, .sidebar-menu > li > ul > li > a.menu-open:after, .sidebar-menu > li > ul > li:hover > a:after, .sidebar-menu > li > ul > li:focus > a:after{
+    background: #FF8819;
+  }
+
 
 /*******************************************************
                           Nav Works
@@ -98,7 +136,7 @@ h1{
 }
 #work-links a.active{
   color : #222;
-  background-color: rgba(255, 136, 25, 0.43);
+  background-color: rgba(255, 136, 25, 0.9);
   border-right: 1px solid #DDD;
   border-left: 1px solid #DDD;
 }
@@ -144,7 +182,6 @@ h1{
 }
 .actu .carousel-inner > .item > img{
   margin: auto;
-  height: 300px;
 }
 .carousel-caption{
   bottom:0;
@@ -451,6 +488,7 @@ margin-right : 0px;
     overflow:hidden;
 }
 .captionBox .caption h4{
+  font-size: 1em;
 }
 .captionBox .caption p{
   font-size: 0.9em;
@@ -512,7 +550,6 @@ margin-right : 0px;
                       Contact
 *******************************************************/
 .contact{
-  width: 50%;
   margin: auto;
   text-align: center;
   padding: 50px;
@@ -535,9 +572,7 @@ margin-right : 0px;
 }
 
 
-.table-bordered, .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
-  border: 1px solid #ddd;
-}
+
 
 /*******************************************************
                       ADMIN Pages
@@ -560,8 +595,17 @@ margin-right : 0px;
   text-align: center;
   vertical-align: middle;
 }
-table.dataTable thead th.sorting_disabled{
-  background-color: #EEE;
+.table-bordered, .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+  border: 1px solid #ddd;
+}
+table.dataTable thead, table.dataTable thead th.sorting_disabled{
+  background-color: #E8E8E8;
+}
+table.dataTable tr.even{
+  background-color: #E8E8E8;
+}
+table.dataTable tr.odd{
+  background-color: none;
 }
 
 /**********  Create  ***************/
@@ -611,6 +655,50 @@ footer p{
   width: 100%;
   text-align: center;
   margin-top: 9.5px;
+}
+
+/********************                  RESPONSIVE            *****************************/
+
+@media screen and (max-width: 862px){
+  #work-links a{font-size:0.9em;}
+  #btn-menu{
+    display: block;
+    float: right;
+    margin-right: 2%;
+    text-align: center;
+    cursor: pointer;
+  }
+  #btn-menu i{
+    font-size: 2em;
+    padding: 12px;
+  }
+  .sb-l-m .navbar > .navbar-right{
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2px;
+    display: none;
+  }
+}
+@media screen and (max-width: 770px){
+  .welcome h1{font-size: 1.8em;}
+  .welcome h2{font-size: 1.6em;}
+  .caption h4{font-size}
+  .caption p{display: none;}
+  body,html{font-size: 12px}
+
+}
+@media screen and (max-width: 630px){
+  .navbar .nav > .flex{
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+  .navbar .nav .flex li{
+    text-align: center;
+  }
+}
+@media screen and (max-width: 570px){
+    #work-links a{font-size:0.8em;}
 }
 
 /*# sourceMappingURL=main.min.css.map */

@@ -5,11 +5,11 @@
 
       <div class="container welcome">
         <div class="row">
-          <div class="col-md-6 logo-block text-right">
+          <div class="col-md-6 col-xs-6 logo-block text-right">
             <img src="assets/img/logos/logo.png" alt="Jérôme FAUREL logo" id="welcome-logo">
 
           </div>
-          <div class="col-md-6 titre-block">
+          <div class="col-md-6 col-xs-6 titre-block">
             <h1 class="text-left">Jérôme FAUREL</h1>
             <h2 class="text-left">Ingénieur du son</h2>
           </div>

@@ -10,7 +10,7 @@
   <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
   <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
   <meta name="author" content="AbsoluteAdmin">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <!-- Font CSS (Via CDN) -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Spinnaker" rel="stylesheet" type='text/css'>
