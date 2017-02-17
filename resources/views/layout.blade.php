@@ -4,12 +4,13 @@
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
+  <meta name="language" content="fr">
   @section('title')
     <title>Jérôme FAUREL</title>
   @show
-  <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
-  <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
-  <meta name="author" content="AbsoluteAdmin">
+  <meta name="keywords" content="jerome, faurel, ingénieur, son, film, bande-annonce, pub, long-mettrage, court-metrage" />
+  <meta name="description" content="Jérôme FAUREL - Ingénieur du son">
+  <meta name="author" content="The-alt">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <!-- Font CSS (Via CDN) -->

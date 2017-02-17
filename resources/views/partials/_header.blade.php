@@ -2,15 +2,15 @@
     <div class="navbar navbar-shadow">
       {{-- <div class="navbar-branding" > --}}
         <!-- Branding Image -->
-        <img class="nav-logo" src="{{asset('assets/img/logos/logo-xs.png')}}" alt="Jérôme FAUREL">
-        <a class="nav-brand" href="{{ url('/') }}">
+        <img class="nav-logo {{ Route::currentRouteName() === 'welcome' ? 'hidden' : '' }}" src="{{asset('assets/img/logos/logo-xs.png')}}" alt="Jérôme FAUREL">
+        <a class="nav-brand {{ Route::currentRouteName() === 'welcome' ? 'hidden' : '' }}" href="{{ url('/') }}">
           {{ config('app.name', 'Jérôme FAUREL') }}
         </a>
       {{-- </div> --}}
       <div id="btn-menu" class="closed">
         <i class="fa fa-bars"></i>
       </div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav   {{ Route::currentRouteName() === 'welcome' ? 'navbar-center' : 'navbar-nav navbar-right' }}">
         <div class="flex">
           <li>
             <a href="/" class="{{ Route::currentRouteName() === 'welcome' ? 'active' : '' }}" ><i class="fa fa-home"></i> HOME</a>

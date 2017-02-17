@@ -27,7 +27,7 @@ class Projets extends Model
     public static function getActus(){
       return Projets::where('active', 1)
         ->orderBy('updated_at', 'desc')
-        ->take(6)
+        ->take(2)
         ->get();
 
     }

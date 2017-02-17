@@ -3,20 +3,35 @@
 @section('content')
   <div class="flex-center position-ref full-height">
 
-      <div class="container welcome">
-        <div class="row">
-          <div class="col-md-6 col-xs-6 logo-block text-right">
+      <div class="container ">
+        <div class="row welcome">
+          <div class="col-md-5 col-md-offset-1 col-xs-6 logo-block text-right">
             <img src="assets/img/logos/logo.png" alt="Jérôme FAUREL logo" id="welcome-logo">
-
           </div>
-          <div class="col-md-6 col-xs-6 titre-block">
+          <div class="col-md-6 col-sm-6 titre-block">
             <h1 class="text-left">Jérôme FAUREL</h1>
             <h2 class="text-left">Ingénieur du son</h2>
           </div>
         </div>
-          <div class="row actu">
-            <h3>Actu</h3>
-            <div id="carousel" class="carousel slide" data-ride="carousel">
+      </div>
+      <div class="split">
+        <img src="/assets/img/onde-sonore-back-3.png" alt="split" class="img-responsive img-split">
+      </div>
+      <div class="container ">
+        <div class="row actu welcome">
+          <h3>Actu</h3>
+          <div class="actu-block">
+            <div class="row">
+              <div class="col-md-3 col-sm-3 col-xs-0">
+              </div>
+              @foreach ($projets as $key => $projet)
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive img-thumbnail">
+                </div>
+              @endforeach
+            </div>
+          </div>
+            {{-- <div id="carousel" class="carousel slide" data-ride="carousel">
 
               <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -34,8 +49,8 @@
                     </div>
                   </div>
                 @endforeach
-              </div>
-            </div>
+              </div> --}}
+            {{-- </div> --}}
           </div>
       </div>
   </div>

@@ -29,6 +29,21 @@ h1{
   margin-top:2em;
   margin-bottom: 2em;
 }
+.split{
+  height: 10px;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+}
+.split img{
+  position: relative;
+  top: -127.5px;
+  left: 0;
+  width: 95%;
+}
+.split #nav-split{
+  top: -45px;
+}
 
 /*******************************************************
                           Nav
@@ -42,19 +57,25 @@ h1{
   padding: 15px 0;
   font-size: 1.4em;
 }
+
+
 .navbar-nav i{
   width: 38px;
-  font-size: 17;
+  font-size: 17px;
   text-align: center;
   padding-left: 13px;
 }
-.navbar-nav a.active i{
+.nav a.active i{
   color: #FF8819;
 }
 .navbar .nav > .flex{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+.navbar .navbar-center > .flex{
+  width: 75%;
+  margin: auto;
 }
 .nav > .flex > li{
   position: relative;
@@ -77,7 +98,11 @@ h1{
 #btn-menu{
   display: none;
 }
-
+.navbar.navbar-shadow{
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.34);
+}
 /*******************************************************
                           SideNav
 *******************************************************/
@@ -175,12 +200,13 @@ h1{
   color: #929292;
   text-align: center;
   text-transform: uppercase;
+  margin: 50px auto;
 }
-#carousel{
+/*#carousel{
   width: 50%;
   margin: auto;
-}
-.actu .carousel-inner > .item > img{
+}*/
+/*.actu .carousel-inner > .item > img{
   margin: auto;
 }
 .carousel-caption{
@@ -211,7 +237,7 @@ h1{
   background-repeat: no-repeat;
   width: 13px;
   height: 13px;
-}
+}*/
 /******************************************  SHADOW  *****************************************************/
 .shadow{
   -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0);
@@ -312,20 +338,24 @@ h1{
                           WORK BOX
 *******************************************************/
 .work-container{
-  height : 100%;
+  height: 100%;
 }
 .border{
-  border : 20px solid #fff;
-  border-radius : 5px;
+  border: 20px solid #fff;
+  border-radius: 5px;
+}
+.nav-box{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .work-box{
-  text-align : center;
+  text-align: center;
   height: 180px;
-  overflow : hidden;
-  position : relative;
-  box-sizing : border-box;
-  margin : 20px;
-  vertical-align : middle;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin: 20px;
+  vertical-align: middle;
 }
 a{
   color: #666;
@@ -339,13 +369,13 @@ a:focus{
   text-decoration: none;
 }
 .work-box .move{
-  position : absolute;
-  width : 30%;
-  height : 70px;
-  z-index : 1;
-  bottom : 0;
+  position: absolute;
+  width: 30%;
+  height: 70px;
+  z-index: 1;
+  bottom: 0;
   padding:0 5px;
-  text-align:left;
+  text-align: left;
 }
 .work-box .move:last-child{
   text-align: right;
@@ -686,6 +716,8 @@ footer p{
   .caption h4{font-size}
   .caption p{display: none;}
   body,html{font-size: 12px}
+  .split #nav-split{width: 95%;}
+
 
 }
 @media screen and (max-width: 630px){
