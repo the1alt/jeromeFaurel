@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Projets;
 use App\Categories;
-use App\images;
+use App\Images;
 use DB;
 use Illuminate\Http\Request;
 use App\Http\Traits\CleanString;

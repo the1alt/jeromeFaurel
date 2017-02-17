@@ -57,9 +57,7 @@ h1{
   padding: 15px 0;
   font-size: 1.4em;
 }
-
-
-.navbar-nav i{
+.nav i{
   width: 38px;
   font-size: 17px;
   text-align: center;
@@ -143,9 +141,9 @@ h1{
 
 #work-links a{
   text-align: center;
-  padding: 1em;
+  padding: 0.8em;
   font-weight: 600;
-  font-size:1em;
+  font-size: 0.8em;
   line-height: 19px;
   color: #666;
   border-right: 1px solid #EEE;
@@ -493,7 +491,7 @@ margin-right : 0px;
   /*background-color: #EEE;*/
 }
 .captionBox .caption {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
     position: absolute;
     margin: auto;
     color: #fff;
