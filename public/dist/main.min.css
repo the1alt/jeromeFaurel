@@ -5,8 +5,15 @@ body, html{
   font-family: 'Spinnaker', sans-serif;
   font-size: 14px;
   min-height: auto;
+  height: auto;
 }
 #main::before{
+  top: auto;
+  bottom: auto;
+}
+#main{
+  height: auto;
+  min-height: auto;
   background: #fff;
 }
 #content_wrapper{
@@ -174,7 +181,7 @@ h1{
 #welcome-logo{
   width: 80%;
   display: inline-block;
-  margin: 30px auto;
+  margin:  0 auto 30px;;
 }
 .welcome .titre-block{
   display: flex;
@@ -190,15 +197,19 @@ h1{
 }
 .welcome h2{
   text-align: center;
-  color: #929292;
+  color: #FF8819;
   letter-spacing: 0.1em;
   font-size: 2em;
 }
 .actu h3{
-  color: #929292;
+  color: #6a6a6a;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2em;
   margin: 50px auto;
+  font-weight: 600;
+  line-height: 1.1;
 }
 /*#carousel{
   width: 50%;
@@ -696,11 +707,14 @@ footer p{
     text-align: center;
     cursor: pointer;
   }
+  #btn-menu.center{
+    float: none;
+  }
   #btn-menu i{
     font-size: 2em;
     padding: 12px;
   }
-  .sb-l-m .navbar > .navbar-right{
+  .sb-l-m .navbar > .nav{
     background-color: #fff;
     overflow: hidden;
     width: 100%;

@@ -22,11 +22,16 @@
           <h3>Actu</h3>
           <div class="actu-block">
             <div class="row">
-              <div class="col-md-3 col-sm-3 col-xs-0">
+              <div class="col-md-2 col-sm-2 col-xs-0">
               </div>
               @foreach ($projets as $key => $projet)
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                  <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive img-thumbnail">
+                <div class="col-md-4 col-sm-4 col-xs-6 text-center">
+                  <a href="#">
+
+                    <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive img-thumbnail img-actu">
+                    <h4>{{ $projet->titre }}</h4>
+                    <p>{{ $projet->description }}</p>
+                  </a>
                 </div>
               @endforeach
             </div>
