@@ -34,7 +34,7 @@
     <tbody>
       @foreach ($projets as $key => $projet)
         <tr>
-          <td><img src="{{ $projet->images['url'] }}" alt="{{ $projet->titre }}" width="100px"></td>
+          <td><img src="{{ $projet->images['url_min'] }}" alt="{{ $projet->titre }}" width="100px"></td>
           <td>{{ $projet->titre }}</td>
           <td class="text-left">{!! $projet->description !!}</td>
           <td>{{ $projet->categories->name }}</td>
