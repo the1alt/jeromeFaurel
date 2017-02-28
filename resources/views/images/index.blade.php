@@ -27,7 +27,7 @@
         <tr>
           <td>
             <p class="hidden">{{ $image->id }}</p><!-- pour trier les images -->
-            <img src="{{ $image->url_min }}" alt="{{ $image->name }}" width="120px"></td>
+            <img src="{{ $image->url }}" alt="{{ $image->name }}" width="120px"></td>
           <td><h3>{{ $image->name }}</h3></td>
           <td>
             @if(count($image->projets) > 0)
