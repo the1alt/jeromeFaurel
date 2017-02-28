@@ -1,8 +1,3 @@
-@import(
-
-  )
-
-
 /*******************************************************
                           COMMON
 *******************************************************/
@@ -11,6 +6,7 @@ body, html{
   font-size: 14px;
   min-height: auto;
   height: auto;
+  background: #FFF;
 }
 #main::before{
   top: auto;
@@ -19,7 +15,7 @@ body, html{
 #main{
   height: auto;
   min-height: auto;
-  background: #fff;
+  background: #FFF;
 }
 #content_wrapper{
   margin-top: 61px;

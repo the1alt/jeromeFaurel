@@ -90,8 +90,8 @@
     Core.init();
 
     $( window ).load(function() {
-      // $('#content_wrapper').removeClass('loading');
-      // $('.div-load').addClass('loaded');
+      $('#content_wrapper').removeClass('loading');
+      $('.div-load').addClass('loaded');
     });
 
 });
