@@ -44,13 +44,14 @@
     @include('partials/_sidebar')
     <!-- End: Sidebar -->
 
-    <div class="div-load loaded">
+    <div class="div-load">
       <div class="loader" >
         Loading...
       </div>
     </div>
     <!-- Start: Content -->
-    <section id="content_wrapper" class="">
+
+    <section id="content_wrapper" class="loading">
         <section id="content" >
           @section('content')
           @show
@@ -88,10 +89,10 @@
     // Init Theme Core
     Core.init();
 
-    // $( window ).load(function() {
-    //   $('#content_wrapper').removeClass('loading');
-    //   $('.div-load').addClass('loaded');
-    // });
+    $( window ).load(function() {
+      $('#content_wrapper').removeClass('loading');
+      $('.div-load').addClass('loaded');
+    });
 
 });
   </script>
