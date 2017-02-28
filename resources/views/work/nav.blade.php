@@ -17,7 +17,7 @@
                   <div class="work-img" >
                     <div class="items ">
                       @foreach ($categorie->projets as $clef => $projet)
-                          <img src="{{$projet->images->url}}" alt="{{$projet->titre}}" class="img{{$clef}}">
+                          <img src="{{$projet->images->url_min}}" alt="{{$projet->titre}}" class="img{{$clef}}" height="70px">
                       @endforeach
                     </div>
                   </div>
