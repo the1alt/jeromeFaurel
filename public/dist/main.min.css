@@ -1,3 +1,8 @@
+@import(
+
+  )
+
+
 /*******************************************************
                           COMMON
 *******************************************************/
@@ -256,14 +261,9 @@ h1{
   -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
 }
-
-
-
 /*******************************************************
                           LOADER
 *******************************************************/
-
-
 .loader {
   color: #710a0a;
   font-size: 90px;
@@ -278,7 +278,6 @@ h1{
   transform: translateZ(0);
   -webkit-animation: load6 1.7s infinite ease;
   animation: load6 1.7s infinite ease;
-
 }
 .div-load{
   width: 100%;
@@ -389,7 +388,6 @@ a:focus{
 .work-box .move:last-child{
   text-align: right;
 }
-
 .work-box .move .fa{
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
@@ -399,7 +397,6 @@ a:focus{
 .work-box .move:hover .fa{
   color: rgba(255, 136, 25, 0.8);
 }
-
 .work-box .move-left{
   left : 0px;
 }
@@ -424,8 +421,6 @@ a:focus{
 .work-box .items img:last-child{
 margin-right : 0px;
 }
-
-
 /*******************************************************
                       WORK DETAIL
 *******************************************************/
@@ -449,7 +444,6 @@ margin-right : 0px;
 .no-cssanimations .grid li {
 	opacity: 1;
 }
-
 .grid li a,
 .grid li img {
 	outline: none;
@@ -461,13 +455,11 @@ margin-right : 0px;
 	max-width: 95%;
   border-radius: 10px;
 }
-
 /* Effect : fall perspective */
 .grid.effect {
 	-webkit-perspective: 1300px;
 	perspective: 1300px;
 }
-
 .grid.effect li.in-view {
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -476,24 +468,20 @@ margin-right : 0px;
 	-webkit-animation: fallPerspective .8s ease-in-out forwards;
 	animation: fallPerspective .8s ease-in-out forwards;
 }
-
 @-webkit-keyframes fallPerspective {
 	0% { }
 	100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
 }
-
 @keyframes fallPerspective {
 	0% { }
 	100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
 }
-
 .btn-warning{
   background-color: #ff8c21;
 }
 .btn-warning:hover{
   background-color: #ff7b00;
 }
-
 /*********************  CAPTION **********************/
 .captionBox{
   overflow: hidden;
@@ -544,16 +532,26 @@ margin-right : 0px;
 .caption h4{
   color: #FF8819;
 }
-
 /******************   Magnific Popup   ******************/
+.mfp-bg{
+  opacity: 0.85;
+}
 .mfp-title{
   text-align : center;
   padding-right: 0;
 }
+.mfp-title h4{
+  margin: 0.6em;
+  font-size: 1.7em;
+  color: #FF9430;
+}
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
   cursor: default;
 }
-
+.mfp-figure small{
+  font-size: 1.15em;
+  line-height: 1.6em;
+}
 /*******************************************************
                       About
 *******************************************************/
@@ -572,7 +570,6 @@ margin-right : 0px;
   font-size: 1.1em;
   line-height:1.5em;
 }
-
 .presentation .cv{
   margin:20px auto;
   text-align: center;
@@ -584,7 +581,6 @@ margin-right : 0px;
 .presentation .cv a{
   display: inline-block;
 }
-
 /*******************************************************
                       Contact
 *******************************************************/
@@ -609,10 +605,6 @@ margin-right : 0px;
   width: 100px;
   margin-top: 8em;
 }
-
-
-
-
 /*******************************************************
                       ADMIN Pages
 *******************************************************/
