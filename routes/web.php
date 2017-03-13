@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
+Route::get('/home', 'HomeController@welcome')->name('welcome');
 
 Route::get('/photos', 'PhotosController@nav')->name('photos');
 

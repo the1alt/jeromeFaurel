@@ -8,8 +8,8 @@
   @section('title')
     <title>Jérôme FAUREL</title>
   @show
-  <meta name="keywords" content="jerome, faurel, ingénieur, son, film, bande-annonce, pub, long-mettrage, court-metrage" />
-  <meta name="description" content="Jérôme FAUREL - Ingénieur du son">
+  <meta name="keywords" content="jerome, faurel, ingénieur, son, film, bande-annonce, pub, long-mettrage, court-metrage, montage, pré-mixage, mastering, perchiste, animation, dessins animés" />
+  <meta name="description" content="Jérôme FAUREL - Ingénieur du son. Retrouvez tous mes projets réalisés ou en cours et des photos de tournage/mixage. N'hésitez pas à me contacter si vous avez un projet à réaliser et que vous souhaitez en discuter.">
   <meta name="author" content="The-alt">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 

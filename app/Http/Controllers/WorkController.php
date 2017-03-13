@@ -98,14 +98,27 @@ class WorkController extends Controller
            //Met en forme le nom du fichier
            $filename = WorkController::cleanString($filename);
 
+           $extension = explode('.', $filename);
+           $extension = ".".end($extension);
+
+           $filenameMin = str_replace($extension, '', $filename).'-min'.$extension ;
+
            //indique ou stocker le fichier en fonction de la catégorie
            $subPath = WorkController::checkCategorie($request->categorie);
 
            $destinationPath = public_path().'/uploads/'.$subPath;
 
-           $file->move($destinationPath, $filename); // Déplace le fichier
+           $file->storeAs($subPath, $filename); // enregistre le fichier
+           $file->storeAs($subPath, $filenameMin); // enregistre le fichier
 
            $store = 'http://localhost:8000/uploads/'.$subPath.$filename;
+           $storeMin = 'http://localhost:8000/uploads/'.$subPath.$filenameMin;
+
+           $min = Image::make($destinationPath.$filenameMin);
+           $min->resize(null, 70, function ($constraint) {
+               $constraint->aspectRatio();
+           });
+           $min->save($destinationPath.$filenameMin, 40);
 
            $image = new Images();
            $image->name = $filename;
@@ -212,13 +225,27 @@ class WorkController extends Controller
             //Met en forme le nom du fichier
             $filename = WorkController::cleanString($filename);
 
+            $extension = explode('.', $filename);
+            $extension = ".".end($extension);
+
+            $filenameMin = str_replace($extension, '', $filename).'-min'.$extension ;
+
             //indique ou stocker le fichier en fonction de la catégorie
             $subPath = WorkController::checkCategorie($request->categorie);
 
             $destinationPath = public_path().'/uploads/'.$subPath;
 
-            $file->move($destinationPath, $filename); // Déplace le fichier
+            $file->storeAs($subPath, $filename); // enregistre le fichier
+            $file->storeAs($subPath, $filenameMin); // enregistre le fichier
+
             $store = 'http://localhost:8000/uploads/'.$subPath.$filename;
+            $storeMin = 'http://localhost:8000/uploads/'.$subPath.$filenameMin;
+
+            $min = Image::make($destinationPath.$filenameMin);
+            $min->resize(null, 70, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $min->save($destinationPath.$filenameMin, 40);
 
             $image = new Images();
             $image->name = $filename;
