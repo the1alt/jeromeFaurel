@@ -47,9 +47,8 @@ class ImagesController extends Controller
 
       File::delete(public_path().$path);
 
-      if (File::exists(public_path().$pathMin))
-      {
-
+      if (File::exists(public_path().$pathMin)){
+        File::delete(public_path().$pathMin);
       }
 
       Session::flash('flash_message', 'l\'image "'.$image->name.'" a bien été supprimée !');
