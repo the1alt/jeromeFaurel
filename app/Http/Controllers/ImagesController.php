@@ -42,15 +42,18 @@ class ImagesController extends Controller
 
       $image = Images::find($id);
 
-      $path = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url);
+      // $path = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url);
+      //
+      // File::delete(public_path().$path);
 
-      File::delete(public_path().$path);
+      File::delete($image->url);
 
       Session::flash('flash_message', 'l\'image "'.$image->name.'" a bien été supprimée !');
 
-      $image->delete();
+      // $image->delete();
 
-      return redirect()->back();
+      return dump($path);
+      // return redirect()->back();
     }
 
     /**
