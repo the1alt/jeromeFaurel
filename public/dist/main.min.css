@@ -29,9 +29,7 @@ body, html{
 a:hover, a:focus{
   text-decoration : none
 }
-a:hover i, a:focus i{
-  color: #FF8819;
-}
+
 h1{
   text-align : center;
   margin-top:2em;
@@ -56,6 +54,12 @@ h1{
 /*******************************************************
                           Nav
 *******************************************************/
+header a:hover i,header a:focus i{
+  color: #FF8819;
+}
+aside a:hover i,aside a:focus i{
+  color: #FF8819;
+}
 .nav-logo{
   float: left;
   padding-left: 10px;
@@ -212,7 +216,17 @@ h1{
   font-weight: 600;
   line-height: 1.1;
 }
-
+.shadow-img{
+  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.2);
+}
+.shadow-img{
+  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.4);
+}
+.img-actu{
+  border-radius: 10px;
+}
 /******************************************  SHADOW  *****************************************************/
 .shadow{
   -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0);
@@ -485,14 +499,7 @@ margin-right : 0px;
   font-size: 0.9em;
   font-style: italic;
 }
-.captionBox a .shadow-img{
-  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.2);
-}
-.captionBox a:hover .shadow-img{
-  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.4);
-}
+
 .caption h4{
   color: #FF8819;
 }

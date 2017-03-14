@@ -2,12 +2,7 @@
 
 @section('css')
   <!-- Datatables CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/media/css/dataTables.bootstrap.css')}}">
-
-  <!-- Datatables Editor Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/Editor/css/dataTables.editor.css')}}">
-  <!-- Datatables ColReorder Addon CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('vendor/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('dist/index.min.css')}}">
 @endsection
 
 @section('content')

@@ -2,7 +2,7 @@
 
 @section('css')
   <!-- Datatables CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('vdist/index.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('dist/index.min.css')}}">
 @endsection
 
 @section('content')

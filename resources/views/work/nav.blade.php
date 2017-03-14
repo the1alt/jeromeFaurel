@@ -8,7 +8,7 @@
       <div class="row">
           @foreach ($categories as $key => $categorie)
             <div class="col-md-6 animated nav-box" data-test="@if($key%2 === 0)slideInLeft @else slideInRight @endif" >
-              <a href="{{route('work.detail', ['id' => $categorie->id, 'link' => $categorie->link])}}">
+              <a href="{{route('work.detail', ['link' => $categorie->link])}}">
               <div class="border shadow work-box">
                   <h2>{{ $categorie->name }}</h2>
                   <div class="move move-left">

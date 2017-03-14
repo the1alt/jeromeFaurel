@@ -22,40 +22,21 @@
           <h3>Actu</h3>
           <div class="actu-block">
             <div class="row">
-              <div class="col-md-2 col-sm-2 col-xs-0">
+              <div class="col-md-1 col-sm-1 col-xs-0">
               </div>
               @foreach ($projets as $key => $projet)
                 <div class="col-md-4 col-sm-4 col-xs-6 text-center">
-                  <a href="#">
-
-                    <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive img-thumbnail img-actu">
+                  <a href="/work/{{$projet->categories->link}}">
+                    <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive shadow-img img-actu">
                     <h4>{{ $projet->titre }}</h4>
                     <p>{{ $projet->description }}</p>
                   </a>
                 </div>
+                <div class="col-md-1 col-sm-1 col-xs-0">
+                </div>
               @endforeach
             </div>
           </div>
-            {{-- <div id="carousel" class="carousel slide" data-ride="carousel">
-
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                @foreach ($projets as $key => $projet)
-                  <li data-target="#carousel" data-slide-to="{{$key}}" @if ($key===1) class="active" @endif></li>
-                @endforeach
-              </ol>
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                @foreach ($projets as $key => $projet)
-                  <div class="item @if ($key===1) active @endif">
-                    <img src="{{$projet->images->url}}" alt="{{$projet->titre}} ">
-                    <div class="carousel-caption">
-                      {{$projet->titre}}
-                    </div>
-                  </div>
-                @endforeach
-              </div> --}}
-            {{-- </div> --}}
           </div>
       </div>
   </div>
