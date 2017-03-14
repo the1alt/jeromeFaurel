@@ -12,6 +12,7 @@ use App\Http\Traits\AddImage;
 use Validator;
 use Event;
 Use Session;
+use Image;
 
 class WorkController extends Controller
 {

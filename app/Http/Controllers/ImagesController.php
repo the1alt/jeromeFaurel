@@ -50,10 +50,9 @@ class ImagesController extends Controller
 
       Session::flash('flash_message', 'l\'image "'.$image->name.'" a bien été supprimée !');
 
-      // $image->delete();
+      $image->delete();
 
-      return dump($path);
-      // return redirect()->back();
+      return redirect()->back();
     }
 
     /**
