@@ -42,7 +42,7 @@ class ImagesController extends Controller
 
       $image = Images::find($id);
 
-      $path = str_replace("http://localhost:8000", "", $image->url);
+      $path = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url);
 
       File::delete(public_path().$path);
 
@@ -80,30 +80,6 @@ class ImagesController extends Controller
           //If a new image is adding
           if ($request->hasFile('image')) {
 
-            // $file = $request->file('image');
-            //
-            // $filename = $file->getClientOriginalName(); // Récupère le nom original du fichier
-            //
-            // //Met en forme le nom du fichier
-            // $filename = ImagesController::cleanString($filename);
-            //
-            // //indique ou stocker le fichier en fonction de la catégorie
-            // $subPath = ImagesController::checkCategorie($request->categorie);
-            //
-            // $destinationPath = public_path().'/uploads/'.$subPath;
-            //
-            // $file->move($destinationPath, $filename); // Déplace le fichier
-            //
-            // $store = 'http://localhost:8000/uploads/'.$subPath.$filename;
-            //
-            // $image = new Images();
-            // $image->name = $filename;
-            // $image->url = $store;
-            // $image->categories_id = $request->categorie;
-            // $image->save();
-
-///////////////////////////////////////////////TEST//////////////////////////////////////////////////////
-
             // $path = public_path().'/uploads/'.$subPath;
 
             $file = $request->file('image');
@@ -129,8 +105,8 @@ class ImagesController extends Controller
             $file->storeAs($subPath, $filename); // enregistre le fichier
             $file->storeAs($subPath, $filenameMin); // enregistre le fichier
 
-            $store = 'http://localhost:8000/uploads/'.$subPath.$filename;
-            $storeMin = 'http://localhost:8000/uploads/'.$subPath.$filenameMin;
+            $store = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
+            $storeMin = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
 
 
             $min = Image::make($destinationPath.$filenameMin);
@@ -146,7 +122,7 @@ class ImagesController extends Controller
             $image->url_min = $storeMin;
             $image->categories_id = $request->categorie;
             $image->save();
-//////////////////////////////////////////////////////////////////////////////////////////////////
+
           }
 
            Session::flash('flash_message', 'l\'image "'.$image->name.'" a bien été créé !');
