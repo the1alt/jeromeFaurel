@@ -10,10 +10,10 @@ trait AddImage
   public static function checkCategorie($categorie){
 
     if (intval($categorie) == 1){
-      $path = 'seriesAnimation/';
+      $path = 'longsMetrages/';
     }
     else if (intval($categorie) == 2){
-      $path = 'longsMetrages/';
+      $path = 'seriesAnimation/';
     }
     else if (intval($categorie) == 3){
       $path = 'pubsBA/';
