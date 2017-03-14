@@ -45,10 +45,10 @@ class ImagesController extends Controller
       $path = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url);
 
       File::delete(public_path().$path);
-      // $filename = $image->filename
-
-
-      // File::delete($image->url);
+            if (File::exists($myfile))
+      {
+          echo "Yup. It exists.";
+      }
 
       Session::flash('flash_message', 'l\'image "'.$image->name.'" a bien été supprimée !');
 
