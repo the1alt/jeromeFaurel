@@ -40,12 +40,13 @@ h1{
   position: absolute;
   text-align: center;
   margin: auto;
+  width: 98%;
 }
 .split img{
   position: relative;
   top: -127.5px;
   left: 0;
-  width: 95%;
+  width: 100%;
 }
 .split #nav-split{
   top: -45px;
