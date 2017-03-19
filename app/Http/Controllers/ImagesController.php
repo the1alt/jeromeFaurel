@@ -42,8 +42,8 @@ class ImagesController extends Controller
 
       $image = Images::find($id);
 
-      $path = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url);
-      $pathMin = str_replace("http://jeromefaurel.the-alt.fr", "", $image->url_min);
+      $path = str_replace("https://jeromefaurel.the-alt.fr", "", $image->url);
+      $pathMin = str_replace("https://jeromefaurel.the-alt.fr", "", $image->url_min);
 
       File::delete(public_path().$path);
 
@@ -110,8 +110,8 @@ class ImagesController extends Controller
             $file->storeAs($subPath, $filename); // enregistre le fichier
             $file->storeAs($subPath, $filenameMin); // enregistre le fichier
 
-            $store = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
-            $storeMin = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
+            $store = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
+            $storeMin = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
 
 
             $min = Image::make($destinationPath.$filenameMin);

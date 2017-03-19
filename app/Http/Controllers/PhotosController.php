@@ -85,7 +85,7 @@ class PhotosController extends Controller
 
               $file->move($destinationPath, $filename); // Déplace le fichier
 
-              $store = 'http://jeromefaurel.the-alt.fr/uploads/photos/'.$filename;
+              $store = 'https://jeromefaurel.the-alt.fr/uploads/photos/'.$filename;
               $photo->image = $store;
             }
 
@@ -111,7 +111,7 @@ class PhotosController extends Controller
 
      $photo = Photos::find($id);
 
-     $path = str_replace("http://jeromefaurel.the-alt.fr", "", $photo->image);
+     $path = str_replace("https://jeromefaurel.the-alt.fr", "", $photo->image);
 
      File::delete(public_path().$path);
 

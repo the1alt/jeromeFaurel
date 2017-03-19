@@ -83,16 +83,17 @@
 
     "use strict";
 
+    $(window).load(function() {
+      $('#content_wrapper').removeClass('loading');
+      $('.div-load').addClass('loaded');
+    });
+
     if ($('body').hasClass('sb-l-o')) {
       $('.div-load').css('left', '150px')
     }
     // Init Theme Core
     Core.init();
 
-    $( window ).load(function() {
-      $('#content_wrapper').removeClass('loading');
-      $('.div-load').addClass('loaded');
-    });
 
 });
   </script>

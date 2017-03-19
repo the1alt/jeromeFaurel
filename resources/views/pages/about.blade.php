@@ -32,9 +32,9 @@
       <p>
         Pour télécharger mon CV :
       </p>
-      <a href="http://media.wix.com/ugd/fd5834_0ddb6a75513f40b692b969ec513c2957.pdf" target="_blank" data-type="document" id="cv-link" titre="CV Jérôme FAUREL">
+      <a href="https://media.wix.com/ugd/fd5834_0ddb6a75513f40b692b969ec513c2957.pdf" target="_blank" data-type="document" id="cv-link" titre="CV Jérôme FAUREL">
         <div class="cv-pdf">
-          <img  alt="CV Jérôme FAUREL" src="http://static.wixstatic.com/micons/dbb8a86ae473275eee143da611a12717.wix_ico_mp/v1/fill/w_38,h_38,al_c,usm_0.66_1.00_0.01/dbb8a86ae473275eee143da611a12717.wix_ico_mp">
+          <img  alt="CV Jérôme FAUREL" src="https://static.wixstatic.com/micons/dbb8a86ae473275eee143da611a12717.wix_ico_mp/v1/fill/w_38,h_38,al_c,usm_0.66_1.00_0.01/dbb8a86ae473275eee143da611a12717.wix_ico_mp">
           <span>CV Jerôme Faurel 2015.pdf</span>
         </div>
       </a>

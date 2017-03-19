@@ -112,8 +112,8 @@ class WorkController extends Controller
            $file->storeAs($subPath, $filename); // enregistre le fichier
            $file->storeAs($subPath, $filenameMin); // enregistre le fichier
 
-           $store = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
-           $storeMin = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
+           $store = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
+           $storeMin = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
 
            $min = Image::make($destinationPath.$filenameMin);
            $min->resize(null, 70, function ($constraint) {
@@ -239,8 +239,8 @@ class WorkController extends Controller
             $file->storeAs($subPath, $filename); // enregistre le fichier
             $file->storeAs($subPath, $filenameMin); // enregistre le fichier
 
-            $store = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
-            $storeMin = 'http://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
+            $store = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filename;
+            $storeMin = 'https://jeromefaurel.the-alt.fr/uploads/'.$subPath.$filenameMin;
 
             $min = Image::make($destinationPath.$filenameMin);
             $min->resize(null, 70, function ($constraint) {
