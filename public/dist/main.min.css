@@ -207,7 +207,7 @@ aside a:hover i,aside a:focus i{
   letter-spacing: 0.1em;
   font-size: 2em;
 }
-.actu h3{
+.actu  h3{
   color: #6a6a6a;
   text-align: center;
   text-transform: uppercase;
@@ -227,6 +227,27 @@ aside a:hover i,aside a:focus i{
 }
 .img-actu{
   border-radius: 10px;
+}
+.actu figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.2s;
+	animation: flash 1.2s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 /******************************************  SHADOW  *****************************************************/
 .shadow{
