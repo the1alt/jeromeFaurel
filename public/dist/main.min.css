@@ -564,6 +564,7 @@ margin-right : 0px;
   text-align: justify;
   font-size: 1.1em;
   line-height:1.5em;
+  padding-left: 50px;
 }
 .presentation .cv{
   margin: 60px auto;
@@ -572,6 +573,7 @@ margin-right : 0px;
 .presentation .cv p{
   display: inline-block;
   padding-right: 20px;
+
 }
 .presentation .cv a{
   display: inline-block;
