@@ -574,6 +574,11 @@ margin-right : 0px;
 .presentation .cv a{
   display: inline-block;
 }
+.fa-file-pdf-o{
+  font-size: 1.5em;
+  color: #FF8819;
+  margin-right: 0.8em;
+}
 /*******************************************************
                       Contact
 *******************************************************/
