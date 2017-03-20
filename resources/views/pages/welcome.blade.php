@@ -27,7 +27,7 @@
               @foreach ($projets as $key => $projet)
                 <div class="col-md-4 col-sm-4 col-xs-6 text-center">
                   <a href="/work/{{$projet->categories->link}}">
-                    <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="img-responsive shadow-img img-actu">
+                    <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="shadow-img img-actu">
                     <h4>{{ $projet->titre }}</h4>
                     <p>{{ $projet->description }}</p>
                   </a>
