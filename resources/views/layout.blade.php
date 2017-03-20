@@ -63,9 +63,18 @@
   <!-- End: Main -->
   <footer>
     <p>
-      &copy; 2017 Jérôme FAUREL | Tous droits réservés | Created by The-Alt | @if (Route::has('login'))
-      <a href="{{ url('/login') }}">Login</a>
-    @endif
+      &copy; 2017 Jérôme FAUREL | Tous droits réservés | Created by The-Alt |
+      @if (Route::has('login'))
+        @if (Auth::check())
+          <a href="{{ url('/logout') }}"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+              Logout
+          </a>
+        @else
+          <a href="{{ url('/login') }}">Login</a>
+        @endif
+      @endif
   </p>
 
   </footer>
