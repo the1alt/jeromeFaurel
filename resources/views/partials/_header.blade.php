@@ -1,4 +1,4 @@
-  <header class="navbar navbar-fixed-top ">
+  <header class="navbar navbar-fixed-top {{ Route::currentRouteName() === 'welcome' ? 'loading' : '' }} ">
     <div class="navbar navbar-shadow">
       {{-- <div class="navbar-branding" > --}}
         <!-- Branding Image -->

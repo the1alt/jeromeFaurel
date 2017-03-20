@@ -85,6 +85,9 @@
 
     $(window).load(function() {
       $('#content_wrapper').removeClass('loading');
+      if ($('header').hasClass('loading')) {
+        $('header').removeClass('loading');
+      }
       $('.div-load').addClass('loaded');
     });
 
