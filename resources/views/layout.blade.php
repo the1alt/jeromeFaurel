@@ -17,7 +17,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Spinnaker" rel="stylesheet" type='text/css'>
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('dist/theme.min.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{asset('dist/theme.min.css')}}">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{asset('assets/img/logos/logo-xs.png')}}">
@@ -82,7 +83,7 @@
 
   @section('js')
 
-  <!-- jQuery &  Theme Javascript -->
+  <!-- jQuery & theme Javascript -->
   <script src="{{asset('dist/main.js')}}"></script>
 
 
@@ -104,7 +105,7 @@
       $('.div-load').css('left', '150px')
     }
     // Init Theme Core
-    Core.init();
+    // Core.init();
 
 
 });

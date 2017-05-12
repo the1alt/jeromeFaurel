@@ -8,6 +8,17 @@ body, html{
   height: auto;
   background: #FFF;
 }
+/* Transitions */
+body.onload-check .navbar,
+body.onload-check .navbar-branding,
+body.onload-check #sidebar_left,
+body.onload-check #sidebar_right,
+body.onload-check #content_wrapper,
+body.onload-check #content,
+body.onload-check #topbar {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 #main::before{
   top: auto;
   bottom: auto;
@@ -61,6 +72,23 @@ header a:hover i,header a:focus i{
 aside a:hover i,aside a:focus i{
   color: #FF8819;
 }
+.navbar {
+  z-index: 1030;
+  margin-bottom: 0;
+  height: 60px;
+  color: #666;
+  background-color: #FFF;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 0;
+  box-shadow: 0 1px 0 0 #e0e0e0;
+  /* Navbar shadow option - Only allowed on default white navbar */
+}
+.navbar.navbar-shadow {
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08), 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08), 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+}
+
 .nav-logo{
   float: left;
   padding-left: 10px;
@@ -677,6 +705,15 @@ table.dataTable tr.odd{
 .bootstrap-select.btn-group .dropdown-menu li{
   width: 33%;
 }
+.bootstrap-select.btn-group .filter-option img{
+  width: 50px;
+}
+.bootstrap-select.btn-group:not(.input-group-btn){
+  display: block;
+}
+.bootstrap-select > .dropdown-toggle{
+  margin-bottom: 10px;
+}
 
 /*******************************************************
                       FOOTER
@@ -742,6 +779,39 @@ footer p{
 }
 @media screen and (max-width: 570px){
     #work-links a{font-size:0.8em;}
+}
+
+
+
+#content {
+  padding: 15px 8px 40px 11px;
+}
+/* content padding on large resolutions */
+@media (min-width: 1100px) {
+  #content {
+    padding: 25px 20px 50px 21px;
+  }
+}
+/* Adds top padding to md columns as a spacer
+ * when they are mobile stacked */
+@media (max-width: 991px) {
+  #content .col-md-2 + .col-md-2,
+  #content .col-md-2 + .col-md-4,
+  #content .col-md-2 + .col-md-6,
+  #content .col-md-4 + .col-md-2,
+  #content .col-md-4 + .col-md-4,
+  #content .col-md-4 + .col-md-6,
+  #content .col-md-6 + .col-md-2,
+  #content .col-md-6 + .col-md-4,
+  #content .col-md-6 + .col-md-6 {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 815px) {
+  #content .panel .panel-body {
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=main.min.css.map */

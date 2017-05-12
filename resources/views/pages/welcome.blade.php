@@ -25,7 +25,7 @@
               <div class="col-md-1 col-sm-1 col-xs-0">
               </div>
               @foreach ($projets as $key => $projet)
-                <div class="col-md-4 col-sm-4 col-xs-6 text-center">
+                <div class="col-md-4 col-sm-4 col-xs-12 text-center">
                   <a href="/work/{{$projet->categories->link}}">
                     <figure>
                       <img src="{{ $projet->images->url }}" alt="{{ $projet->titre }}" class="shadow-img img-actu">

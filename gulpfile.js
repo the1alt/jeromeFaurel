@@ -18,7 +18,11 @@ elixir(function(mix){
         proxy: 'localhost:8000'
    });
     // Mixing CSS Files
-    mix.styles('./public/skin/default_skin/css/theme.css', 'public/dist/theme.min.css');
+    mix.styles(['./public/css/animate.css',
+      './public/css/fontawesome.css',
+      './public/css/glyphicon.css',
+      './public/css/sidebar.css',
+      ], 'public/dist/theme.min.css');
 
     mix.styles('./public/css/main.css', 'public/dist/main.min.css');
 
