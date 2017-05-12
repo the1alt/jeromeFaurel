@@ -18,17 +18,17 @@ elixir(function(mix){
         proxy: 'localhost:8000'
    });
     // Mixing CSS Files
-    mix.styles(['./public/css/animate.css',
+    mix.styles(['./public/vendor/plugins/animate/animate.min.css',
       './public/css/fontawesome.css',
       './public/css/glyphicon.css',
       './public/css/sidebar.css',
-      ], 'public/dist/theme.min.css');
+    ], 'public/dist/theme.min.css');
 
-    mix.styles('./public/css/main.css', 'public/dist/main.min.css');
+    mix.styles('./public/css/main.css', 'public/dist/main.css');
 
 
     mix.styles([
-      './public/admin-tools/admin-forms/css/admin-forms.css',
+      './public/admin-tools/admin-forms/css/admin-forms.min.css',
       './public/vendor/plugins/summernote/summernote.css',
     ], 'public/dist/forms.min.css');
 
@@ -49,7 +49,7 @@ elixir(function(mix){
         './public/js/main.js'
       ], 'public/dist/main.min.js');
 
-    mix.scripts('./public/js/custom/custom.js', 'public/dist/custom.min.js' );
+    mix.scripts('./public/js/custom/custom.js', 'public/dist/custom.js' );
 
     mix.scripts('./public/vendor/plugins/summernote/summernote.min.js', 'public/dist/summernote.min.js' );
 

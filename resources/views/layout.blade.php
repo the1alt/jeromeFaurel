@@ -27,7 +27,7 @@
   @show
 
   {{-- Ma CSS --}}
-  <link rel="stylesheet" href="{{asset('dist/main.min.css')}}" media="screen" title="no title">
+  <link rel="stylesheet" href="{{asset('dist/main.css')}}" media="screen" title="no title">
 
 </head>
 
@@ -114,7 +114,7 @@
   @show
 
   <!-- Custom script -->
-  <script src="{{asset('dist/custom.min.js')}}" charset="utf-8"></script>
+  <script src="{{asset('dist/custom.js')}}" charset="utf-8"></script>
 
   <!-- google analitycs -->
   <script>
