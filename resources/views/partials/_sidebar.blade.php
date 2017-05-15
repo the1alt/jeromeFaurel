@@ -23,7 +23,7 @@
     </div>
   </div>
   <ul class="nav sidebar-menu">
-    <li class="sidebar-label pt20">Menu Administrateur</li>
+    <li class="sidebar-label pt20">Menu Admin</li>
     <li>
       <a class="accordion-toggle {{ strpos(Route::currentRouteName(), 'categories') === 0 ? 'menu-open' : '' }}" href="#">
         <span class="fa fa-tags"></span>
@@ -109,6 +109,9 @@
       </ul>
     </li>
   </ul>
+  <div class="admin-mobile-access">
+    <i class="fa fa-arrow-right"></i>
+  </div>
 
 </div>
 

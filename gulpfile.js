@@ -21,7 +21,7 @@ elixir(function(mix){
     mix.styles(['./public/vendor/plugins/animate/animate.min.css',
       './public/css/fontawesome.css',
       './public/css/glyphicon.css',
-      './public/css/sidebar.css',
+      // './public/css/sidebar.css',
     ], 'public/dist/theme.min.css');
 
     mix.styles('./public/css/main.css', 'public/dist/main.css');
@@ -45,8 +45,8 @@ elixir(function(mix){
     mix.scripts([
         './public/vendor/jquery/jquery-1.11.1.min.js',
         './public/vendor/jquery/jquery_ui/jquery-ui.min.js',
-        './public/js/utility/utility.js', './public/js/demo/demo.js',
-        './public/js/main.js'
+        // './public/js/utility/utility.js', './public/js/demo/demo.js',
+        // './public/js/main.js'
       ], 'public/dist/main.min.js');
 
     mix.scripts('./public/js/custom/custom.js', 'public/dist/custom.js' );

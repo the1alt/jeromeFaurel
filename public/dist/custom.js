@@ -21,11 +21,24 @@ $(document).ready(function(){
       $('#content').css('padding-top', height);
   }
 
+  //Mobile Nav
+  //************************
+  if ($('.nav.navbar-nav.navbar-right').css("display") === "none") {
+    $('#btn-menu').click(function(){
+      console.log('coucou');
+      $('.nav.navbar-nav.navbar-right').toggle(400);
+    });
+  }
+  $('.admin-mobile-access')
 
-  // Left Bar
-  //****************
-  // $(".sidebar.left").sidebar().trigger("sidebar:open");
-
+  //Side Nav accordion
+  //*********************
+  $(".accordion-toggle").click(function(){
+    if (!$(this).hasClass('menu-open')){
+      $(".accordion-toggle.menu-open").removeClass('menu-open');
+    $(this).addClass('menu-open');
+    }
+  });
 
   // Magnific-Popup initialisation and customisation
   //****************
@@ -182,6 +195,20 @@ $(document).ready(function(){
           });
         });
 
+        var titleHeight = [];
+        $('.work-box h2').each(function(){
+          titleHeight.push($(this).height());
+        });
+        TitleMaxHeight = Math.max.apply(null, titleHeight);
+        if (TitleMaxHeight>33) {
+          console.log(TitleMaxHeight);
+          $('.work-box').each(function(){
+            var nativeHeight = $(this).height();
+            $(this).height(nativeHeight - 33 + TitleMaxHeight);
+          });
+        }
+
+
         //apply transformation to the work-box on hover
         $('.work-box').each(function(i){
 
@@ -271,12 +298,7 @@ $(document).ready(function(){
     }
   });
 
-$(".accordion-toggle").click(function(){
-  if (!$(this).hasClass('menu-open')){
-    $(".accordion-toggle.menu-open").removeClass('menu-open');
-  $(this).addClass('menu-open');
-  }
-});
+
 
 
 });
