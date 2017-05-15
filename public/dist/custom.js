@@ -24,7 +24,7 @@ $(document).ready(function(){
 
   // Left Bar
   //****************
-  $(".sidebar.left").sidebar().trigger("sidebar:open");
+  // $(".sidebar.left").sidebar().trigger("sidebar:open");
 
 
   // Magnific-Popup initialisation and customisation

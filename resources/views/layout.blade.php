@@ -118,7 +118,7 @@
 
   @show
 
-  <script src="{{asset('vendor/plugins/jquery.sidebar/src/jquery.sidebar.js')}}" charset="utf-8"></script>
+  {{-- <script src="{{asset('vendor/plugins/jquery.sidebar/src/jquery.sidebar.js')}}" charset="utf-8"></script> --}}
 
   <!-- Custom script -->
   <script src="{{asset('dist/custom.js')}}" charset="utf-8"></script>
