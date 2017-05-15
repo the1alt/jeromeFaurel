@@ -10,7 +10,7 @@
       <div id="btn-menu" class="{{ Route::currentRouteName() === 'welcome' ? 'center' : '' }} closed">
         <i class="fa fa-bars"></i>
       </div>
-      <ul class="nav   {{ Route::currentRouteName() === 'welcome' ? 'navbar-center' : 'navbar-nav navbar-right' }}">
+      <ul class="nav {{ Route::currentRouteName() === 'welcome' ? 'navbar-center' : 'navbar-nav navbar-right' }}">
         <div class="flex">
           <li>
             <a href="/" class="{{ Route::currentRouteName() === 'welcome' ? 'active' : '' }}" ><i class="fa fa-home"></i> HOME</a>

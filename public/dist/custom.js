@@ -6,8 +6,14 @@ $(document).ready(function(){
 
   $(window).load(function(){
 
-    var height = $('.logo-block').height();
-    $('.titre-block').height(height);
+    var logoHeight = $('.logo-block').height();
+    var titreHeight = $('.titre-block').height();
+    if (titreHeight < logoHeight) {
+      $('.titre-block').height(logoHeight);
+    }
+    else{
+      $('.logo-block').height(titreHeight);
+    }
 
     $('.carousel').carousel({
       interval: 4000
@@ -23,13 +29,30 @@ $(document).ready(function(){
 
   //Mobile Nav
   //************************
-  if ($('.nav.navbar-nav.navbar-right').css("display") === "none") {
+
+  // Show and hidfe the mobile navigation
+  if ($('#btn-menu').hasClass('closed')) {
     $('#btn-menu').click(function(){
-      console.log('coucou');
-      $('.nav.navbar-nav.navbar-right').toggle(400);
+      $('#btn-menu i.fa').toggleClass('fa-bars').toggleClass('fa-times');
+      $('.navbar .nav').slideToggle();
     });
   }
-  $('.admin-mobile-access')
+  if ($('.nav.navbar-nav.navbar-right').css("display") === "none") {
+    $('#btn-menu').click(function(){
+    });
+  }
+
+  $('.admin-mobile-access').click(function(){
+    if ($('.sidebar.left').css('left') === "-150px") {
+      $('.sidebar.left').css('left', 0);
+      $('.admin-mobile-access .fa').removeClass('fa-arrow-right').addClass('fa-arrow-left');
+    }
+    else if($('.sidebar.left').css('left') === "0px"){
+      $('.sidebar.left').css('left', "-150px");
+      $('.admin-mobile-access .fa').removeClass('fa-arrow-left').addClass('fa-arrow-right');
+    }
+    console.log($('.sidebar.left').css('left'));
+  });
 
   //Side Nav accordion
   //*********************
@@ -259,24 +282,6 @@ $(document).ready(function(){
           });
 
     });// End Window Load
-  }
-
-  // Show and hidfe the mobile navigation
-  if ($('#btn-menu').hasClass('closed')) {
-    $('#btn-menu').click(function(){
-      $('.sb-l-m .navbar > .nav').slideToggle();
-      $('#btn-menu i.fa').toggleClass('fa-bars').toggleClass('fa-times');
-    });
-  }
-
-  // display beautifull and adaptable split
-  if ($('.split').length > 0) {
-    $(window).load(function(){
-      var imgHeight = $('.split img').height();
-      $('.split img').css('top', - (imgHeight/2) );
-      var contentWdth = $('.container-fluid').width();
-      $('.split').width(contentWdth);
-    });
   }
 
   // set the same height for the "actu" images

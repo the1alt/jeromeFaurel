@@ -51,16 +51,14 @@ h1{
   margin-bottom: 2em;
 }
 .split{
-  height: 10px;
+  /*height: 10px;
   position: absolute;
-  text-align: center;
+  text-align: center;*/
   margin: auto;
+  display: block;
   width: 98%;
 }
 .split img{
-  position: relative;
-  top: -127.5px;
-  left: 0;
   width: 100%;
 }
 .split #nav-split{
@@ -153,6 +151,7 @@ aside a:hover i,aside a:focus i{
   margin-left: 250px;
 }
 .sidebar.left{
+  z-index: 1020;
   width:250px;
   background: #454545;
   height: 100%;
@@ -160,8 +159,10 @@ aside a:hover i,aside a:focus i{
   top: 0;
   left: 0;
   padding: 100px 20px;
+  transition: left 400ms linear;
 }
 .admin-mobile-access{
+  display: none;
   position: absolute;
   top: 61px;
   right: -42px;
@@ -170,6 +171,7 @@ aside a:hover i,aside a:focus i{
   width: 42px;
   height: 48px;
   padding: 7px;
+  cursor: pointer;
 }
 .admin-mobile-access i{
   font-size: 30px;
@@ -926,6 +928,9 @@ footer p{
     .sidebar.left{
       left: -150px;
     }
+    .admin-mobile-access{
+      display: block;
+    }
     #content_wrapper.admin{
       margin-left: 0px;
     }
@@ -942,7 +947,7 @@ footer p{
 }
 /* Adds top padding to md columns as a spacer
  * when they are mobile stacked */
-@media (max-width: 991px) {
+/*@media (max-width: 991px) {
   #content .col-md-2 + .col-md-2,
   #content .col-md-2 + .col-md-4,
   #content .col-md-2 + .col-md-6,
@@ -950,11 +955,10 @@ footer p{
   #content .col-md-4 + .col-md-4,
   #content .col-md-4 + .col-md-6,
   #content .col-md-6 + .col-md-2,
-  #content .col-md-6 + .col-md-4,
   #content .col-md-6 + .col-md-6 {
     padding-top: 10px;
   }
-}
+}*/
 @media (max-width: 815px) {
   #content .panel .panel-body {
     overflow: hidden !important;
