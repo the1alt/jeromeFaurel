@@ -21,6 +21,12 @@ $(document).ready(function(){
       $('#content').css('padding-top', height);
   }
 
+
+  // Left Bar
+  //****************
+  $(".sidebar.left").sidebar().trigger("sidebar:open");
+
+
   // Magnific-Popup initialisation and customisation
   //****************
   if ($('.popup-gallery').length > 0) {
@@ -254,7 +260,6 @@ $(document).ready(function(){
       heights.push(parseInt($(this).height()));
     });
     var maxHeight = Math.max.apply(Math, heights);
-    console.log(maxHeight);
     if (maxHeight < 200) {
       $('.actu-block .img-actu').each(function(){
         $(this).css('height', maxHeight);
@@ -266,6 +271,12 @@ $(document).ready(function(){
     }
   });
 
+$(".accordion-toggle").click(function(){
+  if (!$(this).hasClass('menu-open')){
+    $(".accordion-toggle.menu-open").removeClass('menu-open');
+  $(this).addClass('menu-open');
+  }
+});
 
 
 });

@@ -161,7 +161,22 @@ aside a:hover i,aside a:focus i{
     background: #FF8819;
   }
 
+  #content_wrapper.admin{
+    margin-left: 250px;
+  }
 
+  .sidebar.left{
+    width:250px;
+    background: #454545;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 100px 20px;
+  }
+  .sidebar-menu > li > ul{
+    width: 230px;
+  }
 /*******************************************************
                           Nav Works
 *******************************************************/

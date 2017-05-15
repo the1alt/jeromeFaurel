@@ -18,7 +18,10 @@
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
   <link rel="stylesheet" href="{{asset('dist/theme.min.css')}}">
+  {{-- <link rel="stylesheet" href="{{asset('skin/default_skin/css/theme.css')}}"> --}}
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{asset('assets/img/logos/logo-xs.png')}}">
@@ -31,7 +34,7 @@
 
 </head>
 
-<body class="blank-page @if (Auth::check()) sb-l-o @else sb-l-c @endif ">
+<body class="blank-page">
 
 
   <!-- Start: Main -->
@@ -41,9 +44,11 @@
     @include('partials/_header')
     <!-- End: Header -->
 
-    <!-- Start: Sidebar -->
-    @include('partials/_sidebar')
-    <!-- End: Sidebar -->
+    @if (Auth::check())
+        <!-- Start: Sidebar -->
+        @include('partials/_sidebar')
+        <!-- End: Sidebar -->
+    @endif
 
     <div class="div-load">
       <div class="loader" >
@@ -52,7 +57,7 @@
     </div>
     <!-- Start: Content -->
 
-    <section id="content_wrapper" class="loading">
+    <section id="content_wrapper" class="loading @if(Auth::check())admin @endif">
         <section id="content" >
           @section('content')
           @show
@@ -113,8 +118,13 @@
 
   @show
 
+  <script src="{{asset('vendor/plugins/jquery.sidebar/src/jquery.sidebar.js')}}" charset="utf-8"></script>
+
   <!-- Custom script -->
   <script src="{{asset('dist/custom.js')}}" charset="utf-8"></script>
+
+
+
 
   <!-- google analitycs -->
   <script>
@@ -126,8 +136,10 @@
   ga('create', 'UA-94040215-1', 'auto');
   ga('send', 'pageview');
 
+
   </script>
   <!-- END: PAGE SCRIPTS -->
+
 
 
 </body>

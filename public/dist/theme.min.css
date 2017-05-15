@@ -3492,7 +3492,6 @@ body.sb-l-m .navbar-brand {
 .sidebar-menu > li > a:hover,
 .sidebar-menu > li > a:focus,
 .sidebar-menu > li > a:active {
-  color: inherit;
   background-color: transparent;
 }
 /* Top Level Item - Border Color:hover */
