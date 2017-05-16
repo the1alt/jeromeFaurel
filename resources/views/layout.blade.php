@@ -86,10 +86,13 @@
   </footer>
   <!-- BEGIN: PAGE SCRIPTS -->
 
+  <!-- jQuery & theme Javascript -->
+  <script src="{{asset('dist/jquery.min.js')}}"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   @section('js')
 
-  <!-- jQuery & theme Javascript -->
-  <script src="{{asset('dist/main.js')}}"></script>
 
 
   <script type="text/javascript">
@@ -123,20 +126,15 @@
   <!-- Custom script -->
   <script src="{{asset('dist/custom.js')}}" charset="utf-8"></script>
 
-
-
-
   <!-- google analitycs -->
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-94040215-1', 'auto');
-  ga('send', 'pageview');
-
-
+    ga('create', 'UA-94040215-1', 'auto');
+    ga('send', 'pageview');
   </script>
   <!-- END: PAGE SCRIPTS -->
 
