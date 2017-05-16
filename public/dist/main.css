@@ -394,6 +394,7 @@ aside a:hover i,aside a:focus i{
 }
 .img-actu{
   border-radius: 10px;
+  cursor: pointer;
 }
 .actu figure:hover img {
 	opacity: 1;
